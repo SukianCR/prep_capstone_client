@@ -43,10 +43,7 @@ const registrationSlice = createSlice({
   },
 });
 
-// const storeToken = (state, { payload }) => {
-//   state.token = payload.token;
-//   state.message = payload.message;
-// };
+
 
 export const { useRegistrationMutation } = api;
 

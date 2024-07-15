@@ -14,6 +14,7 @@ export default function Registration() {
     try {
       let success = false;
 
+      console.log("form", form);
       success = await registerUser(form).unwrap();
 
       console.log("sux es" + success);
@@ -23,7 +24,7 @@ export default function Registration() {
         navigate("/");
       }
     } catch (err) {
-      setErrM(err.data.message);
+      setErrM(err?.data?.message);
     }
   };
 
