@@ -1,68 +1,275 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  padding: 0;
+  background-color: #fffdd0 !important;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+}
+
+#logo-image {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Add your own custom styles here */
+.hotpink {
+  color: hotpink;
+}
+
+.error {
+  color: hotpink;
+  padding: 1em;
+  border: yellowgreen 1px dashed;
+  font-size: 1em !important;
+  background-color: rgba(153, 205, 50, 0.199);
+}
+
+.material-symbols-outlined,
+.playwrite {
+  color: #ff69b4;
+}
+
+.playwrite {
+  font-family: "Playwrite ES Deco", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  text-shadow: 0.15em 0.15em 0.2em hotpink !important;
+  /*  */
+}
+.usr-email {
+  text-shadow: 0.15em 0.15em 0.2em yellowgreen !important;
+  color: #000;
+  font-size: 1.8em;
+}
+.cabeza {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+  background-color: rgba(255, 105, 180, 0.2);
+  box-shadow: 0em 0em 4em rgba(255, 105, 180, 0.4) !important;
+  /* rgba(255, 105, 180, 0.25) 0%,
+  rgba(233, 231, 0, 0.25) 50%,
+  rgba(46, 233, 17, 0.2) 100% */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
+  font-size: 2em;
+  text-shadow: 0.1em 0.1em 0.2em hotpink !important;
+  /* padding: 0em 1em; */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.icono-verde {
+  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
+  font-size: 2em;
+  text-shadow: 0.1em 0.1em 0.2em yellowgreen !important;
+  padding: 0em 1em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.cuerpo {
+  padding: 2em 1em;
+  /* background: rgb(255, 105, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 105, 180, 0.15) 0%,
+    rgba(233, 231, 0, 0.15) 50%,
+    rgba(46, 233, 17, 0.15) 100%
+  ); */
+  border-radius: 0.3em;
+}
+
+.navbar-nav {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+.active {
+  color: hotpink !important;
+}
+
+nav {
+  padding: 0em 2em !important;
+}
+
+.nav-item {
+  padding: 0.5em !important;
+}
+
+.nav-link:hover {
+  color: hotpink !important;
+  text-shadow: 0.2em 0.2em 0.3em hotpink;
+  margin-top: -0.2em;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+}
+
+.centro {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.login,
+.register {
+  /* border: hotpink 1px solid; */
+  padding: 2em 0em;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-radius: 0.3em;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  background-color: rgba(255, 105, 180, 0.09);
+  box-shadow: 0em 0em 3em rgba(255, 105, 180, 0.35);
+}
+
+.login > p,
+.register > p {
+  font-size: 1.25em;
+}
+
+.temp_message {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding-top: 1em;
+}
+.legend {
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+
+.legend-books {
+  margin: 2.5em;
+}
+
+.verde {
+  color: yellowgreen;
+  font-size: 0.8em;
+}
+
+.verde,
+.legend {
+  text-align: center !important;
+}
+
+.register > *,
+.login > * {
+  width: 50%;
+  margin: auto !important;
+  text-align: center;
+}
+
+input {
+  background-color: #fffdd03f !important;
+}
+.btn {
+  margin-top: 2em;
+}
+input,
+.btn {
+  border: 1px #fffdd0 solid !important;
+}
+
+.btn-primary {
+  background-color: #ff69b4 !important;
+  color: #fffdd0 !important;
+}
+
+.space {
+  padding: 0.7em;
+}
+.space-m {
+  padding: 1.2em;
+}
+.space-lg {
+  padding: 2em;
+}
+
+.all-books {
+  list-style: none;
+}
+
+.player-card {
+  width: 45%;
+  display: flex;
+  float: left;
+}
+
+.selected-player-card {
+  width: 50%;
+  display: flex;
+  justify-content: space-around !important;
+}
+
+.selected-player-card,
+.player-card {
+  margin: 1em 2em;
+  padding: 3em 2em;
+  border-radius: 0.3em;
+  list-style: none !important;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  background-color: rgba(255, 105, 180, 0.09);
+  box-shadow: 0em 0em 3em rgba(255, 105, 180, 0.35);
+}
+
+img {
+  width: 40% !important;
+}
+
+main {
+  display: flex;
+
+  /* border: 1px solid greenyellow; */
+  /* padding: 2em; */
+}
+
+.player-details {
+  flex-direction: column; /* The details are arranged in a column. */
+  align-items: center; /* The details are centered along the vertical axis. */
+  justify-content: center; /* The details are centered along the horizontal axis. */
+  color: #000; /* The color of the details text. */
+  font-size: 1em; /* The size of the details text. */
+  text-align: center; /* The details text is centered. */
+  padding: 2em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.author {
+  font-style: italic;
+}
+
+.desc {
+  text-align: justify !important;
+  padding-top: 1.5em;
+}
+
+.sube_poco {
+  margin-top: -2em !important;
+}
+
+.formularios {
+  margin-top: 1em;
+}
+
+.formulario_solo {
+  margin-top: 2em;
+}
+
+.sides-space {
+  padding: 0em 1em;
+}
+
+.logo {
+  text-decoration: none;
 }
