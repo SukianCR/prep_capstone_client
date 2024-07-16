@@ -5,8 +5,8 @@ export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://capstone-prep-backend-vjwd.onrender.com/",
-    prepareHeaders: (headers, { getState }) => {
-      const token = getState().registration.token;
+    prepareHeaders: (headers) => {
+      const token = window.sessionStorage.getItem("Token");
       if (token) {
         headers.set("authorization", `Bearer ${token}`);
       }
@@ -18,6 +18,14 @@ export const api = createApi({
     registration: builder.mutation({
       query: (credentials) => ({
         url: "/api/user/register",
+        method: "POST",
+        body: credentials,
+      }),
+      invalidateTags: ["User"],
+    }),
+    login: builder.mutation({
+      query: (credentials) => ({
+        url: "/api/user/login",
         method: "POST",
         body: credentials,
       }),
@@ -43,10 +51,29 @@ const registrationSlice = createSlice({
   },
 });
 
+const loginSlice = createSlice({
+  name: "login",
+  initialState: {},
+  reducers: {
+    setLoginToken: ({ payload }) => {
+      window.sessionStorage.setItem("Token", payload.token);
+    },
 
+    clearLoginToken: () => {
+      window.sessionStorage.removeItem("Token");
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addMatcher(api.endpoints.login.matchFulfilled, setToken);
+  },
+});
 
-export const { useRegistrationMutation } = api;
+export const { useRegistrationMutation, useLoginMutation } = api;
 
 export const { setToken, clearToken } = registrationSlice.actions;
+export const { setLoginToken, clearLoginToken } = loginSlice.actions;
 
-export default registrationSlice.reducer;
+export default {
+  registrationSlice: registrationSlice.reducer,
+  loginSlice: loginSlice.reducer,
+};
