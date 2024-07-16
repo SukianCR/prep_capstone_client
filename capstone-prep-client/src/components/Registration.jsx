@@ -74,7 +74,7 @@ export default function Registration() {
                 type="text"
                 className="form-control"
                 placeholder="First Name"
-                name="firstName"
+                name="firstname"
                 onChange={updateForm}
               />
             </div>
@@ -85,7 +85,7 @@ export default function Registration() {
                 type="text"
                 className="form-control"
                 placeholder="Last Name"
-                name="lastName"
+                name="lastname"
                 onChange={updateForm}
               />
             </div>
