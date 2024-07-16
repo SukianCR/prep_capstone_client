@@ -11,9 +11,9 @@ function App() {
     <Provider store={store}>
       <div>
         <Routes>
-          <Route path="/" element={<Protected />}>
+          {/* <Route path="/" element={<Protected />}>
             <Route path="/" element={<Home />}></Route>
-          </Route>
+          </Route> */}
           <Route path="/registration" element={<Registration />}></Route>
           <Route path="/login" element={<Login />}></Route>
         </Routes>

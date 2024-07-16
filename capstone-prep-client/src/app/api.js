@@ -4,11 +4,14 @@ import { createSlice } from "@reduxjs/toolkit";
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://capstone-prep-backend-vjwd.onrender.com/",
+    // baseUrl: "http://capstone-prep-backend-vjwd.onrender.com/",
+    baseUrl: "http://localhost:3000/",
+
     prepareHeaders: (headers) => {
       const token = window.sessionStorage.getItem("Token");
       if (token) {
         headers.set("authorization", `Bearer ${token}`);
+        // headers.set("Access-Control-Allow-Origin", "*");
       }
       return headers;
     },
