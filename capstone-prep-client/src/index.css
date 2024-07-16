@@ -1,68 +1,117 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  padding: 0;
+  background-color: #5c5c5c;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+.error {
+  color: DeepSkyBlue;
+  padding: 1em;
+  border: yellowgreen 1px dashed;
+  font-size: 1em !important;
+  background-color: rgba(153, 205, 50, 0.199);
+}
+
+.playwrite {
+  font-family: "Playwrite ES Deco", cursive;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  text-shadow: 0.1em 0.1em rgba(0, 191, 255, 0.555) !important;
+  color: DeepSkyBlue;
+}
+
+.center {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center !important;
+  padding-top: 2em;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.login,
+.register {
+  /* border: hotpink 1px solid; */
+  padding: 2em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  width: 30%;
+  border-radius: 0.3em;
+  border: 0.15em solid DeepSkyBlue;
+  background-color: rgba(0, 191, 255, 0.05);
+  box-shadow: 0em 0em 3em rgba(255, 217, 0, 0.3);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.register > *,
+.login > * {
+  width: 50%;
+  margin: auto !important;
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+input {
+  background-color: #ebebeb1f !important;
+  border: 0.1em rgba(255, 217, 0, 0.897) solid !important;
+}
+
+input,
+.btn {
+  box-shadow: 0em 0em 3em rgba(30, 143, 255, 0.3);
+}
+
+.btn-primary {
+  background-color: rgba(255, 217, 0, 0.4) !important;
+  color: DeepSkyBlue !important;
+  border: 0.1em DeepSkyBlue solid !important;
+  margin: 2.5em 0em;
+}
+
+.space {
+  padding: 0.7em;
+}
+.space-m {
+  padding: 1.2em;
+}
+.space-lg {
+  padding: 2em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.title_space {
+  padding: 1em 0em 0.5em 0em;
+  font-size: 1.3em;
+  letter-spacing: 0.15em;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  padding: 1em !important;
+  font-size: 0.9em;
+}
+
+nav {
+  margin-top: 3em;
+}
+.nav-item,
+.title_space {
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+}
+.blue {
+  color: DeepSkyBlue;
+}
+.gold {
+  color: gold;
+}
+.coral {
+  color: lightcoral;
 }
