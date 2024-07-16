@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRegistrationMutation } from "./../app/api";
+import Foot from "./Foot";
 
 export default function Registration() {
   const [form, setForm] = useState({});
@@ -37,11 +38,11 @@ export default function Registration() {
 
   return (
     <>
-      <div className="space"></div>
+      <div className="space-lg"></div>
 
-      <div className="contenedor formulario_solo center">
-        <div className="hotpink register">
-          <p className="hotpink playwrite">Register</p>
+      <div className="  center">
+        <div className="register">
+          <p className=" playwrite title_space">REGISTER</p>
 
           <form onSubmit={submit} name="formRegister">
             <div className="form-group">
@@ -88,9 +89,13 @@ export default function Registration() {
                 onChange={updateForm}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
-              Register
-            </button>
+
+            <div className="form-group">
+              <label></label>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </div>
           </form>
           {errM && (
             <div>
@@ -100,6 +105,8 @@ export default function Registration() {
           )}
         </div>
       </div>
+      <div className="space"></div>
+      <Foot />
     </>
   );
 }

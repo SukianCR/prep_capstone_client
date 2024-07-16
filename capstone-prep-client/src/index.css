@@ -1,119 +1,30 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fffdd0 !important;
-  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
-}
-
-#logo-image {
-  width: 30px;
-  margin-right: 10px;
-}
-
-/* Add your own custom styles here */
-.hotpink {
-  color: hotpink;
+  background-color: #5c5c5c;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
 }
 
 .error {
-  color: hotpink;
+  color: DeepSkyBlue;
   padding: 1em;
   border: yellowgreen 1px dashed;
   font-size: 1em !important;
   background-color: rgba(153, 205, 50, 0.199);
 }
 
-.material-symbols-outlined,
-.playwrite {
-  color: #ff69b4;
-}
-
 .playwrite {
   font-family: "Playwrite ES Deco", cursive;
   font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  text-shadow: 0.15em 0.15em 0.2em hotpink !important;
-  /*  */
+  font-weight: 550;
+  text-shadow: 0.1em 0.1em rgba(0, 191, 255, 0.555) !important;
+  color: DeepSkyBlue;
 }
-.usr-email {
-  text-shadow: 0.15em 0.15em 0.2em yellowgreen !important;
-  color: #000;
-  font-size: 1.8em;
-}
-.cabeza {
+
+.center {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 2em;
-  background-color: rgba(255, 105, 180, 0.2);
-  box-shadow: 0em 0em 4em rgba(255, 105, 180, 0.4) !important;
-  /* rgba(255, 105, 180, 0.25) 0%,
-  rgba(233, 231, 0, 0.25) 50%,
-  rgba(46, 233, 17, 0.2) 100% */
-}
-
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
-  font-size: 2em;
-  text-shadow: 0.1em 0.1em 0.2em hotpink !important;
-  /* padding: 0em 1em; */
-}
-
-.icono-verde {
-  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
-  font-size: 2em;
-  text-shadow: 0.1em 0.1em 0.2em yellowgreen !important;
-  padding: 0em 1em;
-}
-
-.cuerpo {
-  padding: 2em 1em;
-  /* background: rgb(255, 105, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 105, 180, 0.15) 0%,
-    rgba(233, 231, 0, 0.15) 50%,
-    rgba(46, 233, 17, 0.15) 100%
-  ); */
-  border-radius: 0.3em;
-}
-
-.navbar-nav {
-  display: flex !important;
   justify-content: center !important;
-  width: 100%;
-}
-
-.active {
-  color: hotpink !important;
-}
-
-nav {
-  padding: 0em 2em !important;
-}
-
-.nav-item {
-  padding: 0.5em !important;
-}
-
-.nav-link:hover {
-  color: hotpink !important;
-  text-shadow: 0.2em 0.2em 0.3em hotpink;
-  margin-top: -0.2em;
-}
-
-.contenedor {
-  display: flex;
-  justify-content: space-around;
-}
-
-.centro {
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
+  padding-top: 2em;
 }
 
 .login,
@@ -122,41 +33,12 @@ nav {
   padding: 2em 0em;
   display: flex;
   flex-direction: column;
+  justify-content: center !important;
   width: 30%;
   border-radius: 0.3em;
-  border: 1px solid rgba(255, 105, 180, 0.4);
-  background-color: rgba(255, 105, 180, 0.09);
-  box-shadow: 0em 0em 3em rgba(255, 105, 180, 0.35);
-}
-
-.login > p,
-.register > p {
-  font-size: 1.25em;
-}
-
-.temp_message {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  padding-top: 1em;
-}
-.legend {
-  margin-top: 0.5em;
-  padding-left: 1em;
-}
-
-.legend-books {
-  margin: 2.5em;
-}
-
-.verde {
-  color: yellowgreen;
-  font-size: 0.8em;
-}
-
-.verde,
-.legend {
-  text-align: center !important;
+  border: 0.15em solid DeepSkyBlue;
+  background-color: rgba(0, 191, 255, 0.05);
+  box-shadow: 0em 0em 3em rgba(255, 217, 0, 0.3);
 }
 
 .register > *,
@@ -167,19 +49,19 @@ nav {
 }
 
 input {
-  background-color: #fffdd03f !important;
+  background-color: #ebebeb1f !important;
+  border: 0.1em rgba(255, 217, 0, 0.897) solid !important;
 }
-.btn {
-  margin-top: 2em;
-}
+
 input,
 .btn {
-  border: 1px #fffdd0 solid !important;
+  box-shadow: 0em 0em 3em rgba(30, 143, 255, 0.3);
 }
 
 .btn-primary {
-  background-color: #ff69b4 !important;
-  color: #fffdd0 !important;
+  background-color: rgba(255, 217, 0, 0.4) !important;
+  color: DeepSkyBlue !important;
+  border: 0.1em DeepSkyBlue solid !important;
 }
 
 .space {
@@ -192,84 +74,52 @@ input,
   padding: 2em;
 }
 
-.all-books {
-  list-style: none;
-}
-
-.player-card {
-  width: 45%;
-  display: flex;
-  float: left;
-}
-
-.selected-player-card {
-  width: 50%;
-  display: flex;
-  justify-content: space-around !important;
-}
-
-.selected-player-card,
-.player-card {
-  margin: 1em 2em;
-  padding: 3em 2em;
-  border-radius: 0.3em;
-  list-style: none !important;
-  border: 1px solid rgba(255, 105, 180, 0.4);
-  background-color: rgba(255, 105, 180, 0.09);
-  box-shadow: 0em 0em 3em rgba(255, 105, 180, 0.35);
-}
-
-img {
-  width: 40% !important;
-}
-
-main {
-  display: flex;
-
-  /* border: 1px solid greenyellow; */
-  /* padding: 2em; */
-}
-
-.player-details {
-  flex-direction: column; /* The details are arranged in a column. */
-  align-items: center; /* The details are centered along the vertical axis. */
-  justify-content: center; /* The details are centered along the horizontal axis. */
-  color: #000; /* The color of the details text. */
-  font-size: 1em; /* The size of the details text. */
-  text-align: center; /* The details text is centered. */
-  padding: 2em;
-}
-
 .center {
   display: flex;
   justify-content: center;
 }
 
-.author {
-  font-style: italic;
+.title_space {
+  padding: 1em 1em 0em 1em;
+  font-size: 1.3em;
+  letter-spacing: 0.15em;
 }
 
-.desc {
-  text-align: justify !important;
-  padding-top: 1.5em;
+.btn {
+  margin: 3em 0em 2em 0em;
 }
 
-.sube_poco {
-  margin-top: -2em !important;
+.cuerpo {
+  padding: 2em 1em;
+  border-radius: 0.3em;
 }
 
-.formularios {
-  margin-top: 1em;
+.foot {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  padding: 1em !important;
+  font-size: 0.9em;
 }
 
-.formulario_solo {
-  margin-top: 2em;
+nav {
+  margin-top: 3em;
 }
-
-.sides-space {
-  padding: 0em 1em;
+.nav-item,
+.title_space {
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
 }
-
-.logo {
-  text-decoration: none;
+.blue {
+  color: DeepSkyBlue;
+}
+.gold {
+  color: gold;
+}
+.coral {
+  color: lightcoral;
 }
