@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from "./../app/api";
 import Foot from "./Foot";
+import Head from "./Head";
 
 export default function Login() {
   const [form, setForm] = useState({});
@@ -22,9 +23,11 @@ export default function Login() {
 
       if (success?.token) {
         window.sessionStorage.setItem("Token", success.token);
+        window.sessionStorage.setItem("Current_User", form.email);
+
         navigate("/");
       } else {
-        setErrM("Your credentials don't work . Please try again");
+        setErrM("Your credentials don't work, please try again.");
       }
     } catch (err) {
       setErrM(err?.data?.message);
@@ -40,11 +43,14 @@ export default function Login() {
 
   return (
     <>
+     <div>
+        <Head />
+      </div>
       <div className="space-lg"></div>
 
       <div className="  center">
         <div className="register">
-          <p className=" playwrite title_space">Log-in</p>
+          <p className=" playwrite title_space">LOG IN</p>
 
           <form onSubmit={submit} name="formRegister">
             <div className="form-group">

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -6,25 +8,28 @@ body {
 }
 
 .error {
-  color: DeepSkyBlue;
+  color: rgb(58, 58, 58);
   padding: 1em;
-  border: yellowgreen 1px dashed;
+  border: lightcoral 1px dashed;
   font-size: 1em !important;
-  background-color: rgba(153, 205, 50, 0.199);
+  background-color: rgba(240, 128, 128, 0.2);
 }
 
 .playwrite {
-  font-family: "Playwrite ES Deco", cursive;
-  font-optical-sizing: auto;
-  font-weight: 550;
-  text-shadow: 0.1em 0.1em rgba(0, 191, 255, 0.555) !important;
+  font-family: "Anton", sans-serif;
+
+  font-weight: 400;
+  text-shadow: 0.1em 0.05em 0em rgba(0, 191, 255, 0.555) !important;
   color: DeepSkyBlue;
 }
 
-.center {
+.center,
+.center_nav {
   display: flex;
   justify-content: center !important;
-  padding-top: 2em;
+}
+.center_nav {
+  padding: 0.5em !important;
 }
 
 .login,
@@ -35,7 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center !important;
-  width: 30%;
+  width: 40%;
   border-radius: 0.3em;
   border: 0.15em solid DeepSkyBlue;
   background-color: rgba(0, 191, 255, 0.05);
@@ -43,7 +48,7 @@ body {
 }
 .users {
   width: 100% !important;
-  margin: auto;
+  padding: 1em 0em !important;
 }
 .register > *,
 .login > * {
@@ -55,18 +60,38 @@ body {
 input {
   background-color: #ebebeb1f !important;
   border: 0.1em rgba(255, 217, 0, 0.897) solid !important;
-}
-
-input,
-.btn {
+  border-radius: 0.15em !important;
   box-shadow: 0em 0em 3em rgba(30, 143, 255, 0.3);
 }
 
 .btn-primary {
-  background-color: rgba(255, 217, 0, 0.4) !important;
+  background-color: rgba(0, 191, 255, 0.15);
   color: DeepSkyBlue !important;
-  border: 0.1em DeepSkyBlue solid !important;
+  border: gold 1px solid;
   margin: 2.5em 0em;
+  border-radius: 0.15em !important;
+  box-shadow: 0em 0em 3em rgba(30, 143, 255, 0.3);
+}
+
+.buttons_users button {
+  margin-left: 0.5em;
+  border: gold 1px solid;
+  border-radius: 0.2em;
+  background-color: rgba(0, 191, 255, 0.15);
+  padding: 0.5em;
+
+  box-shadow: 0em 0em 3em rgba(30, 143, 255, 0.3);
+}
+
+.nav-item,
+.title_space,
+th {
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
 }
 
 .space {
@@ -79,57 +104,50 @@ input,
   padding: 2em;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-}
-
 .title_space {
-  padding: 1em 0em 0.5em 0em;
-  font-size: 1.3em;
-  letter-spacing: 0.15em;
+  font-size: 2em;
+  letter-spacing: 0.1em;
 }
 
 .foot {
   display: flex;
   justify-content: space-around;
   width: 50%;
-  padding: 1em !important;
   font-size: 0.9em;
+  list-style: none;
+}
+
+.head {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  font-size: 0.9em;
+  list-style: none;
+}
+
+.head > li {
+  padding: 0.5em 1em;
 }
 
 nav {
-  margin-top: 3em;
+  margin-top: 3em !important;
 }
-.nav-item,
-.title_space {
-  background-color: #666666;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
-}
+
 .blue {
   color: DeepSkyBlue;
+  text-decoration: none;
 }
 .gold {
   color: gold;
 }
 .coral {
   color: lightcoral;
-}
-
-table td {
-  width: 10em;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 table td input {
   width: 100%;
-}
-
-td {
-  padding: 0.8em !important;
 }
 
 .table_titles {
@@ -137,6 +155,31 @@ td {
   justify-content: space-around;
 }
 
-.buttons_users button {
-  margin-left: 0.5em;
+.buttons_users {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 60%;
+}
+
+td {
+  text-align: center;
+  padding: 1.2em 0em;
+  width: 100%;
+}
+.color1 {
+  background-color: aqua;
+}
+.color2 {
+  background-color: pink;
+}
+
+thead tr {
+  border-bottom: 1px solid gold !important;
+  padding: 1.5em;
+}
+tbody tr {
+  border-top: 1px solid rgba(0, 191, 255, 0.452) !important;
 }

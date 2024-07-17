@@ -14,6 +14,7 @@ function UserTable() {
   const Logout = () => {
     if (window.sessionStorage.getItem("Token")) {
       window.sessionStorage.removeItem("Token");
+      window.sessionStorage.removeItem("Current_User");
     }
 
     navigate("/Login");
@@ -22,7 +23,7 @@ function UserTable() {
   return (
     <section>
       <div className="center">
-        <h2 className=" playwrite title_space">Users</h2>
+        <h2 className=" playwrite title_space">USERS</h2>
       </div>
       {isLoading && <p>Loading...</p>}
       {error && <p>Something went wrong: {error.message}</p>}
@@ -42,8 +43,8 @@ function UserTable() {
             usersArray.map((user) => <User key={user.id} user={user} />)}
         </tbody>
       </table>
-      <div className="center buttons_users">
-        <button onClick={Logout} className="btn btn-primary">
+      <div className="buttons_users">
+        <button onClick={Logout} className="btn btn-primary playwrite">
           Log Out
         </button>
       </div>

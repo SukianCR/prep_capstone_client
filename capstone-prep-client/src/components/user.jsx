@@ -32,13 +32,7 @@ function User({ user }) {
           onChange={(e) => setEmail(e.target.value)}
         />
       </td>
-      <td>
-        <input
-          type="text"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </td>
+
       <td>
         <input
           type="text"
@@ -55,22 +49,34 @@ function User({ user }) {
       </td>
     </>
   );
+  const cu = window.sessionStorage.getItem("Current_User");
+
+  function Delete_Button({ id, email }) {
+    if (email === window.sessionStorage.getItem("Current_User")) {
+      return (
+        <button onClick={() => deleteUser(id)} disabled>
+          Delete
+        </button>
+      );
+    }
+    return <button onClick={() => deleteUser(id)}>Delete</button>;
+  }
 
   return (
-    <tr>
+    <tr className="table_titles">
       {editing ? (
         editFields
       ) : (
         <>
           <td>{email}</td>
-
           <td>{lastname}</td>
           <td>{firstname}</td>
         </>
       )}
       <td className="buttons_users">
         <button onClick={onEdit}>{editing ? "Save" : "Edit"}</button>
-        <button onClick={() => deleteUser(user.id)}>Delete</button>
+
+        <Delete_Button id={user.id} email={user.email} />
       </td>
     </tr>
   );
