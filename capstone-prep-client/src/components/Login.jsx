@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from "./../app/api";
 import Foot from "./Foot";
 
-export default function Registration() {
+export default function Login() {
   const [form, setForm] = useState({});
   const [errM, setErrM] = useState(null);
   const navigate = useNavigate();
