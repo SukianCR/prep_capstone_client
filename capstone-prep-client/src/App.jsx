@@ -7,6 +7,8 @@ import store from "./app/store.js";
 import { Provider } from "react-redux";
 import Protected from "./components/Protected.jsx";
 
+
+// uncomment home page
 function App() {
   return (
     <Provider store={store}>
