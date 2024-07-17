@@ -20,7 +20,7 @@ export default function Registration() {
 
       console.log("sux es" + success);
 
-      if (success) {
+      if (success?.token) {
         window.sessionStorage.setItem("Token", success.token);
         navigate("/");
       } else {
