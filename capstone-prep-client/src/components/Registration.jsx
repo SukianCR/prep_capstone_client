@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRegistrationMutation } from "./../app/api";
 import Foot from "./Foot";
+import Head from "./Head";
 
 export default function Registration() {
   const [form, setForm] = useState({});
@@ -22,6 +23,7 @@ export default function Registration() {
 
       if (success) {
         window.sessionStorage.setItem("Token", success.token);
+        window.sessionStorage.setItem("Current_User", form.email);
         navigate("/");
       } else {
         setErrM("Your registration didn't work. Please try again");
@@ -40,6 +42,9 @@ export default function Registration() {
 
   return (
     <>
+      <div>
+        <Head />
+      </div>
       <div className="space-lg"></div>
 
       <div className="  center">
