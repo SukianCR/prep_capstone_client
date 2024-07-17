@@ -63,12 +63,12 @@ function User({ user }) {
       ) : (
         <>
           <td>{email}</td>
-          <td>{password}</td>
+
           <td>{lastname}</td>
           <td>{firstname}</td>
         </>
       )}
-      <td>
+      <td className="buttons_users">
         <button onClick={onEdit}>{editing ? "Save" : "Edit"}</button>
         <button onClick={() => deleteUser(user.id)}>Delete</button>
       </td>

@@ -9,13 +9,13 @@ const usersApi = api.injectEndpoints({
       query: () => "api/user/users",
       // needs debugging --- >
       //providesTags: providesList("User"),
-      tags: "User",
+      providesTags: ["User"],
     }),
 
     getUser: builder.query({
       query: (id) => `api/user/users/${id}`,
-      providesTags: providesId("User"),
-      tags: "User",
+      //providesTags: providesId("User"),
+      providesTags: ["User"],
     }),
     updateUser: builder.mutation({
       query: (user) => ({
@@ -23,14 +23,15 @@ const usersApi = api.injectEndpoints({
         method: "PUT",
         body: user,
       }),
-      invalidatesTags: invalidatesId("User"),
+    
+      invalidatesTags: ["User"],
     }),
     deleteUser: builder.mutation({
       query: (id) => ({
         url: `api/user/delete/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: invalidatesId("User"),
+      invalidatesTags: ["User"],
     }),
   }),
 });

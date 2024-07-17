@@ -1,6 +1,7 @@
 import User from "./user";
 import { useGetUsersQuery } from "./userSlice";
-import "./userTable.css";
+
+import { useNavigate } from "react-router-dom";
 
 /**
  * UserList displays a list of users
@@ -9,17 +10,28 @@ function UserTable() {
   const { data: users, error, isLoading } = useGetUsersQuery();
   const usersArray = users && users["users"];
   console.log(usersArray);
+  const navigate = useNavigate();
+  const Logout = () => {
+    if (window.sessionStorage.getItem("Token")) {
+      window.sessionStorage.removeItem("Token");
+    }
+
+    navigate("/Login");
+  };
 
   return (
     <section>
-      <h2>Users</h2>
+      <div className="center">
+        <h2 className=" playwrite title_space">Users</h2>
+      </div>
       {isLoading && <p>Loading...</p>}
       {error && <p>Something went wrong: {error.message}</p>}
-      <table>
+      <div className="space-m"></div>
+      <table className="users">
         <thead>
-          <tr>
+          <tr className="table_titles">
             <th>Email</th>
-            <th>Password</th>
+
             <th>Lastname</th>
             <th>Firstname</th>
             <th>Actions</th>
@@ -30,6 +42,11 @@ function UserTable() {
             usersArray.map((user) => <User key={user.id} user={user} />)}
         </tbody>
       </table>
+      <div className="center buttons_users">
+        <button onClick={Logout} className="btn btn-primary">
+          Log Out
+        </button>
+      </div>
     </section>
   );
 }
