@@ -23,6 +23,8 @@ export default function Registration() {
       if (success) {
         window.sessionStorage.setItem("Token", success.token);
         navigate("/");
+      } else {
+        setErrM("Your registration didn't work. Please try again");
       }
     } catch (err) {
       setErrM(err?.data?.message);
@@ -99,7 +101,6 @@ export default function Registration() {
           </form>
           {errM && (
             <div>
-              <p className="space"></p>
               <p className="error">{errM}</p>
             </div>
           )}

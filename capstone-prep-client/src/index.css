@@ -28,7 +28,8 @@ body {
 }
 
 .login,
-.register {
+.register,
+.users {
   /* border: hotpink 1px solid; */
   padding: 2em 0em;
   display: flex;
@@ -40,7 +41,10 @@ body {
   background-color: rgba(0, 191, 255, 0.05);
   box-shadow: 0em 0em 3em rgba(255, 217, 0, 0.3);
 }
-
+.users {
+  width: 100% !important;
+  margin: auto;
+}
 .register > *,
 .login > * {
   width: 50%;
@@ -114,4 +118,25 @@ nav {
 }
 .coral {
   color: lightcoral;
+}
+
+table td {
+  width: 10em;
+}
+
+table td input {
+  width: 100%;
+}
+
+td {
+  padding: 0.8em !important;
+}
+
+.table_titles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons_users button {
+  margin-left: 0.5em;
 }
