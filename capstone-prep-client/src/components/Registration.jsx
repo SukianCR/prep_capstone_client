@@ -99,7 +99,7 @@ export default function Registration() {
 
             <div className="form-group">
               <label></label>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary frm-btn ">
                 Submit
               </button>
             </div>
