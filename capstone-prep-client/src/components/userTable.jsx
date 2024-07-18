@@ -25,8 +25,12 @@ function UserTable() {
       <div className="center">
         <h2 className=" playwrite title_space">USERS</h2>
       </div>
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Something went wrong: {error.message}</p>}
+      {isLoading && 
+      <div className="loading" >
+      <p className="coral">Loading...</p><span className="material-symbols-outlined">
+      hourglass_top </span></div>}
+
+      {error && <p className="error">Something went wrong: {error.message}</p>}
       <div className="space-m"></div>
       <table className="users">
         <thead>
@@ -44,11 +48,13 @@ function UserTable() {
         </tbody>
       </table>
       <div className="buttons_users">
-        <button onClick={Logout} className="btn btn-primary playwrite">
+        <button onClick={Logout} className="btn btn-primary ">
           Log Out
         </button>
       </div>
+      
     </section>
+    
   );
 }
 

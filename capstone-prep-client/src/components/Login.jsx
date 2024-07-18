@@ -43,7 +43,7 @@ export default function Login() {
 
   return (
     <>
-     <div>
+      <div>
         <Head />
       </div>
       <div className="space-lg"></div>

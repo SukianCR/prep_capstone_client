@@ -25,7 +25,7 @@ function User({ user }) {
 
   const editFields = (
     <>
-      <td>
+      <td className="edit_input">
         <input
           type="text"
           value={email}
@@ -33,14 +33,14 @@ function User({ user }) {
         />
       </td>
 
-      <td>
+      <td className="edit_input">
         <input
           type="text"
           value={firstname}
           onChange={(e) => setFirstname(e.target.value)}
         />
       </td>
-      <td>
+      <td className="edit_input">
         <input
           type="text"
           value={lastname}
@@ -49,17 +49,20 @@ function User({ user }) {
       </td>
     </>
   );
-  const cu = window.sessionStorage.getItem("Current_User");
 
   function Delete_Button({ id, email }) {
     if (email === window.sessionStorage.getItem("Current_User")) {
       return (
-        <button onClick={() => deleteUser(id)} disabled>
+        <button className="shine" onClick={() => deleteUser(id)} disabled>
           Delete
         </button>
       );
     }
-    return <button onClick={() => deleteUser(id)}>Delete</button>;
+    return (
+      <button className="shine" onClick={() => deleteUser(id)}>
+        Delete
+      </button>
+    );
   }
 
   return (
@@ -74,7 +77,7 @@ function User({ user }) {
         </>
       )}
       <td className="buttons_users">
-        <button onClick={onEdit}>{editing ? "Save" : "Edit"}</button>
+        <button className="shine" onClick={onEdit}>{editing ? "Save" : "Edit"}</button>
 
         <Delete_Button id={user.id} email={user.email} />
       </td>
