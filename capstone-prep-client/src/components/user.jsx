@@ -32,19 +32,18 @@ function User({ user }) {
           onChange={(e) => setEmail(e.target.value)}
         />
       </td>
-
-      <td className="edit_input">
-        <input
-          type="text"
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-        />
-      </td>
       <td className="edit_input">
         <input
           type="text"
           value={lastname}
           onChange={(e) => setLastname(e.target.value)}
+        />
+      </td>
+      <td className="edit_input">
+        <input
+          type="text"
+          value={firstname}
+          onChange={(e) => setFirstname(e.target.value)}
         />
       </td>
     </>
