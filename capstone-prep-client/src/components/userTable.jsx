@@ -7,7 +7,13 @@ import { useNavigate } from "react-router-dom";
  * UserList displays a list of users
  */
 function UserTable() {
-  const { data: users, error, isLoading } = useGetUsersQuery();
+  const {
+    data: users,
+    error,
+    isLoading,
+  } = useGetUsersQuery({}, { refetchOnMountOrArgChange: true });
+
+
   const usersArray = users && users["users"];
   console.log(usersArray);
   const navigate = useNavigate();
@@ -25,10 +31,12 @@ function UserTable() {
       <div className="center">
         <h2 className=" playwrite title_space">USERS</h2>
       </div>
-      {isLoading && 
-      <div className="loading" >
-      <p className="coral">Loading...</p><span className="material-symbols-outlined">
-      hourglass_top </span></div>}
+      {isLoading && (
+        <div className="loading">
+          <p className="coral">Loading...</p>
+          <span className="material-symbols-outlined">hourglass_top </span>
+        </div>
+      )}
 
       {error && <p className="error">Something went wrong: {error.message}</p>}
       <div className="space-m"></div>
@@ -52,9 +60,7 @@ function UserTable() {
           Log Out
         </button>
       </div>
-      
     </section>
-    
   );
 }
 
