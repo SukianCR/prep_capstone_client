@@ -17,6 +17,7 @@ const usersApi = api.injectEndpoints({
       //providesTags: providesId("User"),
       providesTags: ["User"],
     }),
+
     updateUser: builder.mutation({
       query: (user) => ({
         url: `api/user/users/${user.id}`,
@@ -26,6 +27,7 @@ const usersApi = api.injectEndpoints({
     
       invalidatesTags: ["User"],
     }),
+    
     deleteUser: builder.mutation({
       query: (id) => ({
         url: `api/user/delete/${id}`,
